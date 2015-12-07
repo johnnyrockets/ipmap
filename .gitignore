@@ -1,0 +1,6 @@
+*~
+*.swp
+*.py[cd]
+*.log
+*.json
+__pycache__/
