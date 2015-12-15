@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+import geoip2
 import ipaddress
 import json
 import logging
@@ -49,8 +50,14 @@ def add_ip_data(ip_dict, ip_address, target):
     if ipaddress.ip_address(ip_address).is_private:
         logger.debug('SKIPPING private address')
         return
+
+    try:
+        geoip = GEOIPAddress(ip_address)
+    except geoip2.errors.AddressNotFoundError as e:
+        logger.error('Address not found in database: {}'.format(e))
+        return
+
     logger.info('Processing IP: "{} {}"'.format(target, ip_address))
-    geoip = GEOIPAddress(ip_address)
     hostname, aliaslist, ipaddrlist = lookup(ip_address)
     # Make sure that we have a latitude and longitude.
     if geoip.latitude and geoip.longitude:
