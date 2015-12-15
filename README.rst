@@ -4,7 +4,7 @@ IPMAP
 
 .. contents:: Table of Contents
 
-A Python 3 script to parse a packet capture file into a JSON object that can be uploaded to http://johnbiz.net/tools/ip-map/.  The JSON object is used to display each non-private IP address on a Google Map.  It's a great way to get a visual on the source and destination of your IP traffic.
+A Python 3 script to parse a packet capture file into a JSON object that can be uploaded to https://johnbiz.net/tools/ip-map/.  Each non-private IP address will be displayed on a Google Map.  It's a great way to get a visual on the source and destination of your IP traffic.
 
 
 Getting Started
@@ -68,7 +68,7 @@ The JSON object looks like this::
 
 The resulting page will display all the IP addresses on a Google Map.
 
-.. image:: http://johnbiz.net/static/img/ipmap_screenshot.jpg
+.. image:: https://johnbiz.net/static/img/ipmap_screenshot.jpg
    :alt: Google Map with IP Address markers
 
 
