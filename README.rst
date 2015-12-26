@@ -4,7 +4,7 @@ IPMAP
 
 .. contents:: Table of Contents
 
-A Python 3 script to parse a packet capture file into a JSON object that can be uploaded to https://johnbiz.net/tools/ip-map/.  Each non-private IP address will be displayed on a Google Map.  It's a great way to get a visual on the source and destination of your IP traffic.
+A Python 3 script to parse a packet capture file into a JSON object that can be uploaded to https://johnbiz.net/ip-map/.  Each non-private IP address will be displayed on a Google Map.  It's a great way to get a visual on the source and destination of your IP traffic.
 
 
 Getting Started
@@ -15,7 +15,7 @@ Obtaining a packet capture
 
 This can be done a multitude of ways.  I've listed a few here.
 
-* Using a command line tools such as tcpdump_.
+* Using a command line tool such as tcpdump_.
 * Wireshark_.
 * Using built in firewall packet capture tools, such as those provided by Pfsense_.
 
@@ -50,7 +50,7 @@ Installation
     python ipmap.py -h
     python ipmap.py -i /path/to/capture.pcap
 
-This may take some time, depending on the size of you packet capture file.  Once completed, you can visit https://johnbiz.net/tools/ip-map/ and upload the .json file.
+This may take some time, depending on the size of you packet capture file.  Once completed, you can visit https://johnbiz.net/ip-map/ and upload the .json file.
 
 The JSON object looks like this::
 
